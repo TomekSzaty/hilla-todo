@@ -9,30 +9,31 @@ import javax.validation.constraints.NotBlank;
 public class Todo {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
     private boolean done;
 
     @NotBlank
     private String task;
 
     public Todo() {
-
     }
 
-    public Todo( String task) {
+    public Todo(String task) {
         this.task = task;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(Integer id) {
+
+    public void setId(Long id) {
         this.id = id;
     }
 
     public boolean isDone() {
         return done;
     }
+
     public void setDone(boolean done) {
         this.done = done;
     }
@@ -40,9 +41,10 @@ public class Todo {
     public String getTask() {
         return task;
     }
+
     public void getTask(String task) {
         this.task = task;
     }
-    
+
 
 }
